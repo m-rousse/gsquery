@@ -3,10 +3,8 @@ namespace GSQuery;
 
 class GSQuery {
 	static function create($type, $info) {
-		$className = ucfirst($type);
-		$file = dirname(__FILE__) . '/query/' . $type . '.php';
-		if(file_exists($file)) {
-			require_once $file;
+		$className = "Query\\".ucfirst($type);
+		if(class_exists($className)){
 			$instance = new $className($info);
 			return $instance;
 		}
@@ -32,22 +30,6 @@ class GSQuery_Parent {
 
 	public function queryRcon($command) {
 		error_log('GSQuery subtype does not support queryRcon()');
-	}
-
-	/**
-	 * Initialize a protocol
-	 * @param string $name The protocol name (File name)
-	 * @param array $data The protocol settings
-	 */
-	protected function initializeProtocol($name, $data) {
-		$className = ucfirst($name);
-		$file = dirname(__FILE__) . '/protocol/' . $name . '.php';
-		if(file_exists($file)) {
-			require_once $file;
-			$instance = new $className($data);
-			return $instance;
-		}
-		throw new Exception("Invalid protocol : " . $name);
 	}
 
 	/**
