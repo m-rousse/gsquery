@@ -21,7 +21,7 @@
     },
     "autoload": {
         "psr-4": {
-            "gsquery\\": "gsquery/"
+            "gsquery\\": ""
         }
     }
 }
