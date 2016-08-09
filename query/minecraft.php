@@ -1,4 +1,6 @@
 <?php
+namespace GSQuery\Query;
+
 use GSQuery\GSQuery_Parent;
 use GSQuery\Protocols\Sourcequery;
 use GSQuery\Protocols\Sourcercon;
