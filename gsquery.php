@@ -3,7 +3,7 @@ namespace GSQuery;
 
 class GSQuery {
 	static function create($type, $info) {
-		$className = "Query\\".ucfirst($type);
+		$className = "GSQuery\\Query\\".ucfirst($type);
 		if(class_exists($className)){
 			$instance = new $className($info);
 			return $instance;
