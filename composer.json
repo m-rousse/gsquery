@@ -1,0 +1,27 @@
+{
+    "name": "gsquery-cake/gsquery-cake",
+    "type": "library",
+    "description": "A small and EXPERIMENTAL PHP GameServer Query Library - fork for CakePHP 3.",
+    "keywords": [
+        "gsquery",
+        "source",
+        "cakephp"
+        ],
+    "homepage": "https://github.com/nikkiii/gsquery",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nikkiii"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "gsquery\\": "gsquery/"
+        }
+    }
+}
